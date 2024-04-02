@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+::selection {
+  background: none;
+}
+
+.landing-page_bg-container {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header.top-items_container {
+  width: 100%;
+  height: 11vh;
+  background-color: rgb(43, 43, 80);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-items_container .top-left-items_con {
+  width: 14rem;
+  height: 100%;
+  /* border: 1px solid #fff; */
+}
+
+.top-items_container .top-right-items_con {
+  /* border: 1px solid #fff; */
+  max-width: 60%;
+  height: 100%;
+  display: flex;
+}
+
+.top-items_container .top-right-items_con ul {
+  /* background-color: #fff; */
+  align-self: center;
+}
+
+.top-items_container .top-right-items_con ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 1vw;
+}
+
+.top-items_container .top-right-items_con ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.top-items_container .top-right-items_con ul li a:hover {
+  text-decoration: underline;
+  color: rgb(216, 216, 255);
+}
+
+a:visited {
+  color: rgb(0, 0, 170);
+}
+
+
+section.landing-page_main {
+  width: 100%;
+  height: 89vh;
+  gap: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: lightblue; */
+}
+
+.landing-page_main .left_text-item_con {
+  width: 45%;
+  height: 60vh;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.landing-page_main .left_text-item_con .text-item_1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.landing-page_main .left_text-item_con .text-item_2 {
+  font-size: 1.8rem;
+}
+
+.landing-page_main .left_text-item_con .text-item_3 {
+  font-size: 1.8rem;
+}
+
+.landing-page_main .right_sign_con {
+  width: 36%;
+  height: 40rem;
+  background-color: rgba(180, 248, 248, 0.2);
+  animation-name: box;
+  animation-iteration-count: unset;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+@keyframes box {
+  100% {
+    box-shadow: .7px .7px 2.8rem 1rem rgb(175, 170, 170);
+  }
+}
+
+
+.landing-page_main .right_sign_con #fillForm_con {
+  width: 0;
+  height: auto;
+  font-size: 1.6rem;
+  padding: 3rem 0;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+  transition: width .7s;
+  animation-name: hide;
+  animation-iteration-count: unset;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes hide {
+  100% {
+    width: 100%;
+  }
+}
+
+/* .landing-page_main .right_sign_con:hover #fillForm_con{
+  width: 100%;
+} */
+
+#fillForm_con .userName_input_con,
+#fillForm_con .password_input_con {
+  width: 84%;
+  display: inline-flex;
+  flex-flow: column nowrap;
+}
+
+#fillForm_con .userName_input_con label[for="user"],
+#fillForm_con .password_input_con label[for="passW"] {
+  font-weight: 600;
+  font-size: 1.8rem;
+  padding-bottom: .4rem;
+}
+
+#fillForm_con input[type="text"],
+#fillForm_con input[type="password"] {
+  height: 4rem;
+  background: rgb(173, 216, 230, 0.2);
+  border: none;
+  outline: none;
+  padding: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.instructions {
+  color: rgb(2, 2, 70);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: monospace;
+  transform: scale(0);
+  transition: transform 1.2s;
+}
+
+#fillForm_con .userName_input_con:hover .instructions {
+  transform: scale(1);
+}
+
+#fillForm_con .password_input_con:hover .instructions {
+  transform: scale(1);
+}
+
+#fillForm_con .remember-me_input_con {
+  width: 84%;
+}
+
+#fillForm_con .remember-me_input_con input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#fillForm_con .remember-me_input_con label[for="reMe"] {
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding-left: .7rem;
+}
+
+#fillForm_con hr {
+  background-color: rgb(2, 2, 70);
+  border: none;
+  height: .3rem;
+  width: 0;
+  transition: width 1.2s;
+}
+
+#fillForm_con .userName_input_con:hover hr {
+  width: 100%;
+}
+
+#fillForm_con .password_input_con:hover hr {
+  width: 100%;
+}
+
+#fillForm_con button[type="submit"] {
+  width: 84%;
+  height: 4rem;
+  border: none;
+  background-color: rgb(37, 211, 211);
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  transition: transform .5s ease;
+}
+
+#fillForm_con button[type="submit"]:hover {
+  border-bottom: 2px solid rgb(5, 90, 90);
+  font-size: 1.88rem;
+}
+
+#fillForm_con button[type="submit"]:active {
+  transform: scale(0.988);
+}
+
+.landing-page_main .right_sign_con .bottom-text-item {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 100%;
+  transition: transform .7s;
+  transform: scale(0.7);
+}
+
+.landing-page_main .right_sign_con:hover .bottom-text-item {
+  transform: scale(1);
+}
+
+.landing-page_main .right_sign_con .bottom-text-item a {
+  text-decoration: none;
+  font-size: 1.55rem;
+  font-weight: 600;
+  font-style: oblique;
+}
+
+.landing-page_main .right_sign_con .bottom-text-item a:hover {
+  text-decoration: underline;
+}

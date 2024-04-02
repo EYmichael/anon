@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="landing-page_bg-container">
+
+        <header class="top-items_container">
+            <figure class="top-left-items_con"></figure>
+            <nav class="top-right-items_con">
+                <ul>
+                    <li><a href="./index.html">Sign In</a></li>
+                    <li><a href="#">Instagram Followers</a></li>
+                    <li><a href="#">Tiktok Followers</a></li>
+                    <li><a href="#">Twitter Followers</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="landing-page_main">
+
+            <div class="left_text-item_con">
+                <h1 class="text-item_1">Nigeria's Fastest And <br> Cheapest SMM Panel</h1>
+                <p class="text-item_2">Get likes, Followers, views and everything else you need from the best SMM <br>
+                    panel in Nigeria.</p>
+                <small class="text-item_3">All at super affordable prices.</small>
+            </div>
+
+            <div class="right_sign_con">
+                <form action="deriv.com" method="post" id="fillForm_con">
+
+                    <div class="userName_input_con" style="position: relative;">
+                        <label for="user">Username</label>
+                        <input type="text" id="user" required title="" onkeyup="validate()" />
+                        <hr id="hrOne">
+                        <span class="instructions" id="userNErr" style="position: absolute; top: 7rem;">Username is
+                            required</span>
+                    </div>
+
+                    <div class="password_input_con" style="position: relative;">
+                        <label for="passW">Password</label>
+                        <input type="password" id="passW" required title="" onkeyup="validateOne()" />
+                        <hr id="hrTwo">
+                        <span class="instructions" id="passWErr" style="position: absolute; top: 7rem;">Password is
+                            required</span>
+                    </div>
+
+
+                    <div class="remember-me_input_con">
+                        <input type="checkbox" name="" id="reMe">
+                        <label for="reMe">Remember me</label>
+                    </div>
+
+                    <button type="submit" onclick="validateForm()">Sign in</button>
+
+                </form>
+
+                <p class="bottom-text-item">Do not have an account? <a href="./sign-up.html">Sign up</a></p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
